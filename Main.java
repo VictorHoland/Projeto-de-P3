@@ -13,7 +13,7 @@ static String mensagem[][][] = new String[10][10][999];
 static int mensagemid[] = new int[10];
 static int amizades[][] = new int[10][10];
 static int contas, contasaux;
-static int i = 0, kaux = 0,id,limite = 0, mensagemax = 1;
+static int i = 0, kaux = 0,id,limite = 0, mensagemax = 0;
 
 public static void main (String[] args)
 {
@@ -293,7 +293,7 @@ boolean logado = false;
                     int deletar = input.nextInt();
                     
                     if(deletar == 1){
-                        System.out.println("Você tem certeza?\n1- SIM\b 2-NÃO");
+                        System.out.println("Você tem certeza?\n1- SIM \n 2-NÃO");
                         int certeza = input.nextInt();
                         if(certeza == 1){
                             nome[id][0] = null;
@@ -309,11 +309,13 @@ boolean logado = false;
                         }
                     }
                     on = 0;
+                    logado = false;
                     i--;
                     contas--;
                 
                 }else{
                     on = 0;
+                    logado = false;
                 }
                 
             }
@@ -450,4 +452,5 @@ boolean logado = false;
             System.out.println(nome[l][0]);
         }
     }
+
 }
